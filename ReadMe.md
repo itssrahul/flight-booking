@@ -6,10 +6,10 @@ SpringBoot Application that demonstrates REST API Development using Spring MVC, 
 
 This application has following REST end-points that provide flight-booking. 
 
-1. POST /findFlightsByCode
-2. POST /findFlightsByCityName
-3. POST /booking
-4. POST /getFlightOfferByAirportCodes
+1. GET /findFlightsByCode
+2. GET /findFlightsByCityName
+3. GET /booking
+4. GET /getFlightOfferByAirportCodes
 
 ## Technologies used
 

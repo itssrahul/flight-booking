@@ -22,7 +22,7 @@ public class BookingController {
     @Autowired
     private FlightRepo flightRepo;
 
-    @RequestMapping(value = "/booking", method = RequestMethod.POST)
+    @RequestMapping(value = "/booking", method = RequestMethod.GET)
     public String bookFlight(@RequestParam("from") String from, @RequestParam("to") String to,
                                                  @RequestParam("flightId") String flightId, @RequestParam("passengerName") String passengerName){
 

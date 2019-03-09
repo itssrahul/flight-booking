@@ -14,7 +14,7 @@ public class OfferController {
     @Autowired
     private OfferRepo offerRepo;
 
-    @RequestMapping(value = "/getFlightOfferByAirportCodes", method = RequestMethod.POST)
+    @RequestMapping(value = "/getFlightOfferByAirportCodes", method = RequestMethod.GET)
     public FlightOffer getFlightOffer(@RequestParam("from") String from, @RequestParam("to") String to){
         return offerRepo.findByDepartureAndArrival(from,to);
     }

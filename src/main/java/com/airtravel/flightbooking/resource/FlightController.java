@@ -19,12 +19,12 @@ public class FlightController {
     private AirportRepo airportRepo;
 
 
-    @RequestMapping(value = "/findFlightsByCode", method = RequestMethod.POST)
+    @RequestMapping(value = "/findFlightsByCode", method = RequestMethod.GET)
     public Flight findFlightsByAirportCode(@RequestParam("from") String from, @RequestParam("to") String to){
         return flightRepo.findByDepartureAndArrival(from,to);
     }
 
-    @RequestMapping(value = "/findFlightsByCityName", method = RequestMethod.POST)
+    @RequestMapping(value = "/findFlightsByCityName", method = RequestMethod.GET)
     public Flight findFlightsByCity(@RequestParam("from") String from, @RequestParam("to") String to){
 
         Airport fromAirport = airportRepo.findByNameIsContaining(from);
